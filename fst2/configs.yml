@@ -1,0 +1,45 @@
+data:
+  data_dir: fst/data
+  delimiter: "\t"
+  do_lower_case: true
+  label_file: fst/data/labels.txt
+  max_seq_length: 128
+model:
+  config_name: null
+  model_name_or_path: fst/pretrained_model
+  prediction_model_dir: null
+others:
+  result_dir: fst/result_dir
+  seed: 0
+  tensorboard_dir: runs/ner
+pipeline:
+  do_predict: true
+  do_train: true
+  evaluate_during_training: false
+  model_type: bert
+  task: ner
+tokenizer:
+  tokenizer_name: null
+train:
+  adam_epsilon: 1.0e-08
+  cache_dir: null
+  eval_all_checkpoints: true
+  fp16: false
+  fp16_opt_level: O1
+  gradient_accumulation_steps: 1
+  learning_rate: 5e-5
+  local_rank: -1
+  logging_steps: 500
+  max_grad_norm: 1.0
+  max_steps: -1
+  no_cuda: true
+  num_train_epochs: 3
+  output_dir: fst/output_dir
+  overwrite_cache: false
+  overwrite_output_dir: false
+  per_gpu_eval_batch_size: 8
+  per_gpu_train_batch_size: 8
+  result_dir: fst/result_dir
+  save_steps: 500
+  warmup_steps: 0
+  weight_decay: 5.0e-05

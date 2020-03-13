@@ -1,0 +1,1 @@
+from .configs import TASK_CONFIGS

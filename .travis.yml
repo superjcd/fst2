@@ -1,0 +1,23 @@
+# Config file for automatic testing at travis-ci.com
+
+language: python
+
+python:
+  - 3.7
+  - 3.6
+  - 3.5
+
+scrpts: python setup.py install
+
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user:  "__token__"
+  password:
+    secure: "pypi-AgEIcHlwaS5vcmcCJDdlNjY3OWY2LTg0MjEtNGM0ZS04ZTYyLWQyZWI2MjYxNjQ4NwACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgEa_Gww1_tQPkD3zrrdCPf5pQwnGv62siN_xhkYlF1sQ"
+  on:
+    tags: true
+    python: 
+      - 3.7
+      - 3.6
+      - 3.5
