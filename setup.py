@@ -34,7 +34,7 @@ setup(
     description="train nlp models much more easily",
     entry_points={
         'console_scripts': [
-            'fst=fst.main:entry',
+            'fst=fst2.main:entry',
         ],
     },
     install_requires=requirements,
