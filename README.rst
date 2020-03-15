@@ -26,10 +26,10 @@ The goal of fst2 is just making the whole trainning process comfortable and easy
 Features
 --------
 Train your nlp models fast and easily based one different nlp tasks, fst2 supports the following tasks:
-  1 Name entity recognition.
-  2 Textclassification or Sentiment classification.
-  3 Textgeneration(comming soon).
-  4 Feature extraction(comming soon).
+  - 1 Name entity recognition.
+  - 2 Textclassification or Sentiment classification.
+  - 3 Textgeneration(comming soon).
+  - 4 Feature extraction(comming soon).
 
 
 Install
