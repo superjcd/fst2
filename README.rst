@@ -103,7 +103,7 @@ you can download pretrained model from `google-reserch <https://github.com/googl
 
 * output_dir: Holds models that you trained.
 
-* result_dir: Holds performance reports and predictions file based given your test file.
+* result_dir: Holds performance reports and predictions based on your test file.
 
 2 Now just run the commands to start trainning::
 
