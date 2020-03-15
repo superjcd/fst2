@@ -127,9 +127,6 @@ Then the result.
   :alt: output
 
 
-
-
-
 Credits
 -------
 

@@ -39,7 +39,7 @@ setup(
     },
     install_requires=requirements,
     license="MIT license",
-    long_description=readme + '\n\n' + history,
+    long_description=history,
     include_package_data=True,
     keywords='fst2',
     name='fst2',
