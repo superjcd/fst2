@@ -32,7 +32,13 @@ from .processers import (
     SingleSentenceClassificationProcessor,
     SequnceTokenClassificationProcessor
     )
-from .utils import CACHE_PARAMS, set_seed, get_tokenclassification_labels, get_textclassification_labels
+from .utils import (
+    CACHE_PARAMS, 
+    set_seed, 
+    get_tokenclassification_labels, 
+    get_textclassification_labels, 
+    get_label2id, 
+    get_id2label)
 from .commons import _train, _evaluate, _predict
 
 
@@ -155,7 +161,8 @@ class NerMixin():  # or just class
 
         self.config = self.config_class.from_pretrained(
             self.config_name if self.config_name else self.model_name_or_path,
-            num_labels=self.num_labels
+            num_labels=self.num_labels, label2id=get_label2id(self.labels),
+            id2label=get_id2label(self.labels)
         )
         self.tokenizer = self.tokenizer_class.from_pretrained(
             self.tokenizer_name if self.tokenizer_name else self.model_name_or_path,
@@ -182,7 +189,8 @@ class TextClassfictionMixin():  # or just class
 
         self.config = self.config_class.from_pretrained(
             self.config_name if self.config_name else self.model_name_or_path,
-            num_labels=self.num_labels
+            num_labels=self.num_labels, label2id=get_label2id(self.labels),
+            id2label=get_id2label(self.labels)
         )
         self.tokenizer = self.tokenizer_class.from_pretrained(
             self.tokenizer_name if self.tokenizer_name else self.model_name_or_path,

@@ -107,8 +107,8 @@ def get_tokenclassification_labels(path):
         if "O" not in labels:
             labels = ["O"] + labels
         return labels
-    else:  # default : Conll2003
-        return ["O", "B-MISC", "I-MISC", "B-PER", "I-PER", "B-ORG", "I-ORG", "B-LOC", "I-LOC"]
+    else: 
+        raise ValueError(f"label file {path} not existed")
 
 
 def get_textclassification_labels(path):
@@ -119,8 +119,29 @@ def get_textclassification_labels(path):
     else:
         raise ValueError(f"label file {path} not existed")
 
+
+def get_id2label(labels):
+    """
+    Get id2label mapping based on labels
+
+    Args:
+      labels: list of labels.
+
+    Return:
+      id2label map
+    """
+    return {str(k): v for k, v in enumerate(labels)}
     
 
+def get_label2id(labels):
+    """
+    Get label2id mapping based on labels
 
+    Args:
+      labels: list of labels.
 
+    Return:
+      label2id map
+    """
+    return {v: str(k) for k, v in enumerate(labels)}
 

@@ -293,13 +293,11 @@ def _evaluate(task,
             preds = np.append(preds, logits.detach().cpu().numpy(), axis=0)
             out_label_ids = np.append(out_label_ids, inputs["labels"].detach().cpu().numpy(), axis=0)
     
-    print("origin predis: {}".format(preds))
     eval_loss = eval_loss / nb_eval_steps
     preds = np.argmax(preds, axis=ouput_index)  
 
     label_map = {i: label for i, label in enumerate(labels)}
     
-    print("preds: {}".format(preds))
     # make outputs based on task category
     if task in ["ner"]:
         from seqeval.metrics import f1_score, precision_score, recall_score
@@ -334,9 +332,6 @@ def _evaluate(task,
             if out_label_ids[i] != pad_token_label_id:
                 out_label_list[i] = label_map[out_label_ids[i]]
                 preds_list[i] = label_map[preds[i]]
-        
-        print("out_label_list: {}".format(out_label_list))
-        print("pred_list: {}".format(preds_list))
 
         results = {
             "loss": eval_loss,
