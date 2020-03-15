@@ -25,7 +25,7 @@ The goal of fst2 is just making the whole trainning process comfortable and easy
 
 Features
 --------
-Train your nlp models fast and easily based one different nlp tasks, fst2 supports the following tasks:
+Train your nlp models fast and easily based on different nlp tasks, fst2 supports the following tasks:
   - 1 Name entity recognition.
   - 2 Textclassification or Sentiment classification.
   - 3 Textgeneration(comming soon).
@@ -115,13 +115,13 @@ you can download pretrained model from `google-reserch <https://github.com/googl
 then the models should be served on the 8888 port of your localhost. Vist `Swagger UI Pagehttps://localhost:8888/docs` and test your modle (if you want change the host, feel free to add a ``--host`` flag). 
 Here is a demo , we can use our fresh trained model to predict the location in a sentence(chinese), which is often seen in task like intent recognition.
 
-.. image:: ./docs/_static/input.png
+.. image:: ./docs/_static/ner_input.png
   :width: 600
   :alt: input
 
 Then the result.
 
-.. image:: ./docs/_static/output.png
+.. image:: ./docs/_static/ner_output.png
   :width: 600
   :alt: output
 
