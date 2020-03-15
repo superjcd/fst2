@@ -79,6 +79,7 @@ Most settings are ok, you can just leave them alone, if you wanna change some of
 
 you can set a parent directory name by using ``parent-dirname`` flag follows a directory name if you don't like the default parent name -- fst.
 each subdirectory name and the meaning is explained as below:
+
 * data:  Holding necessary data files, e.g. a train data file, a label file and other necessary data files based on your seetings(like test file if you turn the ``do_test`` setting on in configs.yml), you should take care of your data format and delimiter. if let say you wanna train a ner model and you set ``do_train`` to ``true``, ``do_test`` to ``true`` , ``evaluate_during_training`` to true, and ``label_file`` to ``fst/data/labels.txt``  in the configs.yml(also the default) , then you should put some data files under data directory, like below:
 ::
     
