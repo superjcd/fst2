@@ -19,7 +19,7 @@ fasttrainer
 
 Overview
 ---------
-Trainning a  nlp deeplearning model is not that easy especially for the new commers, cus you have to take care of many things: preparing data, capsulizing models using pytorch or tensorflow , and worry about a lot of overwhelming staffs like gpu settings, model setting etc., that make the whole process tedious and boring. 
+Trainning a nlp deeplearning model is not that easy especially for the new commers, cus you have to take care of many things: preparing data, capsulizing models using pytorch or tensorflow , and worry about a lot of overwhelming staffs like gpu settings, model setting etc., that make the whole process tedious and boring. 
 The goal of fst2 is just making the whole trainning process comfortable and easy based on different nlp tasks.
 
 
@@ -28,7 +28,7 @@ Features
 Train your nlp models fast and easily based on different nlp tasks, fst2 supports the following tasks:
   - 1 Name entity recognition.
   - 2 Textclassification or Sentiment classification.
-  - 3 Textgeneration(comming soon).
+  - 3 Text generation(comming soon).
   - 4 Feature extraction(comming soon).
 
 
@@ -66,7 +66,7 @@ The whole process of trainning a nlp model is as following::
         num_train_epochs: 3
         ...
     
-most setting is ok, you can just leave it alone, if you wanna change some settings, just feel free to do that.
+Most settings are ok, you can just leave them alone, if you wanna change some of the settings, just feel free to do that.
 
 ``gen-dir`` flag will genenrate a buch of default directories for you, the directory tree looks like this:
 ::
@@ -77,7 +77,7 @@ most setting is ok, you can just leave it alone, if you wanna change some settin
         ├── pretrained_model
         └── result_dir
 
-you can set a parent directory name by using ``--parent-dirname`` flag follows a directory name if you don't like the default parent name -- fst.
+you can set a parent directory name by using ``parent-dirname`` flag follows a directory name if you don't like the default parent name -- fst.
 each subdirectory name and the meaning is explained as below:
 * data:  Holding necessary data files, e.g. a train data file, a label file and other necessary data files based on your seetings(like test file if you turn the ``do_test`` setting on in configs.yml), you should take care of your data format and delimiter. if let say you wanna train a ner model and you set ``do_train`` to ``true``, ``do_test`` to ``true`` , ``evaluate_during_training`` to true, and ``label_file`` to ``fst/data/labels.txt``  in the configs.yml(also the default) , then you should put some data files under data directory, like below:
 ::
@@ -112,7 +112,7 @@ you can download pretrained model from `google-reserch <https://github.com/googl
 
     transfomers-cli serve --task ner --model {your trainned modle path} --tokenizer {your trainned modle path} 
 
-then the models should be served on the 8888 port of your localhost. Vist `Swagger UI Pagehttps://localhost:8888/docs` and test your modle (if you want change the host, feel free to add a ``--host`` flag). 
+then the models should be served on the 8888 port of your localhost. Vist `SwaggerUI Page <https://localhost:8888/docs>`__ and test your modle (if you want change the host, feel free to add a ``--host`` flag). 
 Here is a demo , we can use our fresh trained model to predict the location in a sentence(chinese), which is often seen in task like intent recognition.
 
 .. image:: ./docs/_static/ner_input.png
@@ -128,22 +128,6 @@ Then the result.
 
 
 
-
-
-
-
-
-
-
-
-  
-    
-  
-   
-
-
-
-* TODO
 
 Credits
 -------
