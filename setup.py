@@ -10,7 +10,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = ["torch==1.3.1", "transformers==2.4.1", "pyyaml==5.1.2"]
 
 setup_requirements = ['pytest-runner', ]
 
@@ -44,7 +44,6 @@ setup(
     keywords='fst2',
     name='fst2',
     packages=find_packages(include=['fst2', 'fst2.*']),
-    install_requires=["torch==1.3.1","pyyaml", "tensorflow==2.1.0", "fastapi==0.49.0", "transformers==2.4.1", "pyyaml==5.1.2"], 
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
