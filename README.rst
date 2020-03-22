@@ -20,7 +20,7 @@ fasttrainer
 Overview
 ---------
 Trainning a nlp deeplearning model is not that easy especially for the new commers, cus you have to take care of many things: preparing data, capsulizing models using pytorch or tensorflow , and worry about a lot of overwhelming staffs like gpu settings, model setting etc., that make the whole process tedious and boring. 
-The goal of fst2 is just making the whole trainning process comfortable and easy based on different nlp tasks.
+The goal of fst2 is just making the whole trainning process comfortable and easy based on different nlp tasks. Under the hood, fst2 leverage the power of the convenient package ``transformers`` to make this happen, if you are new to transfomers, better check their `homepage <https://huggingface.co/transformers/index.html>`__ first.
 
 
 Features
@@ -29,7 +29,8 @@ Train your nlp models fast and easily based on different nlp tasks, fst2 support
   - 1 Name entity recognition.
   - 2 Textclassification or Sentiment classification.
   - 3 Text generation(comming soon).
-  - 4 Feature extraction(comming soon).
+  - And so on.
+
 
 
 Install
@@ -91,7 +92,8 @@ each subdirectory name and the meaning is explained as below:
 
 and set a correct delimiter in the configs.yml. fst now only support data file with .txt extension for name entity recognition, see details for other tasks in the official documentation under ``Usage`` section. And you can download a small sample of data from ``example_datas`` under the root of this repo.
 
-* pretrained_model: Holding pretrainned_model, the directory will looks like below:
+* pretrained_model: Holding pretrainned_model(In default fst will load model from pretrained_model directory
+, but you can also change the value of ``model_name_or_path`` in configs.yml to the pretrained model names provided by  `huggingface <https://huggingface.co/transformers/pretrained_models.html>`__), the directory will looks like below:
 ::
 
     pretrained_model
